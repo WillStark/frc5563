@@ -8,13 +8,15 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class IntakeCommand extends Command {
+public class MoveCommand extends Command {
 
 	private double intakeSpeed;
+	private boolean isForward = true;
 	
-    public IntakeCommand() {
+    public MoveCommand(boolean direction) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	this.isForward = direction;
     	requires(Robot.lifter);
     }
 
@@ -26,8 +28,11 @@ public class IntakeCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	
-    	Robot.lifter.liftUp(intakeSpeed);
+    	if(isForward) {
+    		Robot.lifter.liftUp(intakeSpeed);
+    	} else {
+    		Robot.lifter.liftUp(-intakeSpeed);
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
