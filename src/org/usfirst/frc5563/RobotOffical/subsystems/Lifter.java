@@ -1,7 +1,6 @@
 package org.usfirst.frc5563.RobotOffical.subsystems;
 
 import org.usfirst.frc5563.RobotOffical.RobotMap;
-import org.usfirst.frc5563.RobotOffical.commands.IntakeCommand;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
@@ -18,7 +17,7 @@ public class Lifter extends Subsystem {
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
+        
     }
 
 	public void liftUp(double value) {

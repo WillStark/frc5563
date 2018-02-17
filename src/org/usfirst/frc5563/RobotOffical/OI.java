@@ -11,6 +11,7 @@
 
 package org.usfirst.frc5563.RobotOffical;
 
+
 import org.usfirst.frc5563.RobotOffical.commands.*;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.Joystick;
@@ -65,8 +66,8 @@ public class OI {
         joystick = new Joystick(0);
         Button button = new JoystickButton(joystick1, 5);
         button.whenPressed(new MoveArmCommand(true));
-        Button button = new JoystickButton(joystick1, 6);
-        button.whenPressed(new MoveArmCommand(false));
+        Button button2 = new JoystickButton(joystick1, 6);
+        button2.whenPressed(new MoveArmCommand(false));
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
