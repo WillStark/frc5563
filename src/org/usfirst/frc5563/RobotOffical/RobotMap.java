@@ -30,7 +30,7 @@ public class RobotMap {
     public static WPI_VictorSPX lifterVictorSPX3;
     public static WPI_VictorSPX intakeVictorSPX4;
     public static WPI_VictorSPX intakeVictorSPX5;
-    public static DifferentialDrive differentialDrive2;
+   // public static DifferentialDrive differentialDrive2;
     
     public static WPI_VictorSPX driveTrainVictorSPX1;
     public static WPI_VictorSPX driveTrainVictorSPX2;
@@ -47,7 +47,7 @@ public class RobotMap {
         lifterVictorSPX3 = new WPI_VictorSPX(3);
         intakeVictorSPX4 = new WPI_VictorSPX(4);
         intakeVictorSPX5 = new WPI_VictorSPX(5);
-        differentialDrive2 = new DifferentialDrive(intakeVictorSPX4,intakeVictorSPX5);
+        //differentialDrive2 = new DifferentialDrive(intakeVictorSPX4,intakeVictorSPX5);
        
         
         driveTrainVictorSPX1 = new WPI_VictorSPX(1);

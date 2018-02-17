@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 public class Intake extends Subsystem {
     public static WPI_VictorSPX intakeVictorSPX4;
     public static WPI_VictorSPX intakeVictorSPX5;
-    private final DifferentialDrive differentialDrive2 = RobotMap.differentialDrive2;
+   // private final DifferentialDrive differentialDrive2 = RobotMap.differentialDrive2;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
@@ -22,7 +22,8 @@ public class Intake extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     }
 	public void intake(double value) {
-		differentialDrive2.tankDrive(value,value);
+		intakeVictorSPX4.set(value);
+		intakeVictorSPX5.set(-value);
 	}
 }
 
