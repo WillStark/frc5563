@@ -65,9 +65,15 @@ public class OI {
         
         joystick = new Joystick(0);
         Button button = new JoystickButton(joystick1, 5);
-        button.whileHeld(new MoveArmCommand(true));
+        button.whileHeld(new TakeInCommand(true));
         Button button2 = new JoystickButton(joystick1, 6);
+        button2.whileHeld(new TakeInCommand(false));
+        
+        Button buttonA = new JoystickButton(joystick1, 1);
+        button.whileHeld(new MoveArmCommand(true));
+        Button buttonB = new JoystickButton(joystick1, 2);
         button2.whileHeld(new MoveArmCommand(false));
+
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
