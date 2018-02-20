@@ -1,7 +1,6 @@
 package org.usfirst.frc5563.RobotOffical.commands;
 
 import org.usfirst.frc5563.RobotOffical.Robot;
-import org.usfirst.frc5563.RobotOffical.subsystems.Intake;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
@@ -9,9 +8,10 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
+
 public class TakeInCommand extends Command {
 
-	private double intakeSpeed;
+//	private double intakeSpeed;
 	private boolean isTakeIn = true;
 	
     public TakeInCommand(boolean direction) {

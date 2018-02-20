@@ -1,9 +1,7 @@
 package org.usfirst.frc5563.RobotOffical.commands;
 
-import org.usfirst.frc5563.RobotOffical.OI;
 import org.usfirst.frc5563.RobotOffical.Robot;
 
-import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**

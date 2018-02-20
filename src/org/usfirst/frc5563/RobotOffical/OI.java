@@ -64,15 +64,15 @@ public class OI {
         joystick1 = new Joystick(1);
         
         joystick = new Joystick(0);
-        Button button = new JoystickButton(joystick1, 5);
-        button.whileHeld(new TakeInCommand(true));
-        Button button2 = new JoystickButton(joystick1, 6);
-        button2.whileHeld(new TakeInCommand(false));
+        Button buttonLB = new JoystickButton(joystick1, 5);
+        buttonLB.whileHeld(new TakeInCommand(true));
+        Button buttonRB = new JoystickButton(joystick1, 6);
+        buttonRB.whileHeld(new TakeInCommand(false));
         
         Button buttonA = new JoystickButton(joystick1, 1);
-        button.whileHeld(new MoveArmCommand(true));
+        buttonA.whileHeld(new MoveArmCommand(true));
         Button buttonB = new JoystickButton(joystick1, 2);
-        button2.whileHeld(new MoveArmCommand(false));
+        buttonB.whileHeld(new MoveArmCommand(false));
 
 
         // SmartDashboard Buttons
