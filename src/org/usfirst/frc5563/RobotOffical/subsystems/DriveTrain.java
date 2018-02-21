@@ -56,13 +56,14 @@ public class DriveTrain extends Subsystem {
 		//stop = Robot.driveTrain.drive(0,0);
 		//turnLeft = 
 		//turnRight =
-		
-		
 	}
 	
 	public void rightTurn(){
-		this.drive(-0.85,0.95);
-		
+		this.drive(-0.85,0.95);	
+	}
+	
+	public void leftTurn(){
+		this.drive(0.95,-0.85);	
 	}
 
     // Put methods for controlling this subsystem
