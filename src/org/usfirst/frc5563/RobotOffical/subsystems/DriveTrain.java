@@ -49,7 +49,7 @@ public class DriveTrain extends Subsystem {
 
 	public void drive(double rawAxis, double rawAxis2) {
 		// TODO Auto-generated method stub
-		differentialDrive1.tankDrive(-.75*rawAxis, -.75*rawAxis2, true);
+		differentialDrive1.tankDrive(-.85*rawAxis, -.85*rawAxis2, true);
 		differentialDrive1.setSafetyEnabled(false);
 		//driveSlow = Robot.driveTrain.drive(-.5, -.5);
 		//driveFast = Robot.driveTrain.drive(-.75, -.75);

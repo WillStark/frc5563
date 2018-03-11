@@ -58,14 +58,13 @@ public class AutonomousCommandM extends Command {
     	RobotMap.driveTrainVictorSPX6.setNeutralMode(NeutralMode.Brake);
     	RobotMap.driveTrainVictorSPX7.setNeutralMode(NeutralMode.Brake);
     	Robot.driveTrain.drive(-autoSpeed,-(autoSpeed+.05));
-    	Timer.delay(autoDelay);
-		Timer.delay(4);
+    	Timer.delay(3);
     	Robot.driveTrain.drive(0, 0);/**/
     	RobotMap.driveTrainVictorSPX1.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX2.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX6.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX7.setNeutralMode(NeutralMode.Coast);
-    	RobotMap.driveTrainDifferentialDrive1.setSafetyEnabled(true);
+    	RobotMap.driveTrainDifferentialDrive1.setSafetyEnabled(false);
   
     }
     

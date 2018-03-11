@@ -57,33 +57,52 @@ public class AutonomousCommandL extends Command {
     	RobotMap.driveTrainVictorSPX2.setNeutralMode(NeutralMode.Brake);
     	RobotMap.driveTrainVictorSPX6.setNeutralMode(NeutralMode.Brake);
     	RobotMap.driveTrainVictorSPX7.setNeutralMode(NeutralMode.Brake);
-    	Robot.driveTrain.drive(-autoSpeed,-(autoSpeed+.05));
-    	Timer.delay(autoDelay);
-    	Robot.driveTrain.leftTurn();
-		Timer.delay(4);
+    	Robot.driveTrain.drive(-autoSpeed,-(autoSpeed-.03));
+    	Robot.lifter.liftUp(-.04); 
+    	Timer.delay(1.4);
+    	Timer.delay(.9);
+    	Robot.lifter.liftUp(.15);
+    	Timer.delay(.3);
+    	Robot.lifter.liftUp(0);
+    	
+    	//Robot.driveTrain.leftTurn();
+		//Timer.delay(1.2);
+		//Robot.driveTrain.drive(-autoSpeed,-(autoSpeed-.03));
+		//Timer.delay(.5);
     	Robot.driveTrain.drive(0, 0);/**/
+    	
     	RobotMap.driveTrainVictorSPX1.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX2.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX6.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX7.setNeutralMode(NeutralMode.Coast);
-    	RobotMap.driveTrainDifferentialDrive1.setSafetyEnabled(true);
+    	RobotMap.driveTrainDifferentialDrive1.setSafetyEnabled(false);
     	
     	Robot.gameData.charAt(0);
     	
     	if(Robot.gameData.length() > 0)
         {
         	if(Robot.gameData.charAt(0) == 'L')
-        	{	
+        	{
+        		//test
         		RobotMap.intakeVictorSPX4.setSafetyEnabled(false);
         		RobotMap.intakeVictorSPX5.setSafetyEnabled(false);
         		Robot.intake.intake(-1.0);
         		Timer.delay(2);
         		Robot.intake.intake(0);
-        		RobotMap.intakeVictorSPX4.setSafetyEnabled(true);
-        		RobotMap.intakeVictorSPX5.setSafetyEnabled(true);
+        		RobotMap.intakeVictorSPX4.setSafetyEnabled(false);
+        		RobotMap.intakeVictorSPX5.setSafetyEnabled(false);
+        		//delete before run 
         	}else{
-        		
+        		RobotMap.intakeVictorSPX4.setSafetyEnabled(false);
+        		RobotMap.intakeVictorSPX5.setSafetyEnabled(false);
+        		Robot.intake.intake(-1.0);
+        		Timer.delay(2);
+        		Robot.intake.intake(0);
+        		RobotMap.intakeVictorSPX4.setSafetyEnabled(false);
+        		RobotMap.intakeVictorSPX5.setSafetyEnabled(false);
         	}
+        
+        	
         }
 
     }

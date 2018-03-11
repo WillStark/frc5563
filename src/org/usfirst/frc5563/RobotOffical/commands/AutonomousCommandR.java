@@ -57,21 +57,23 @@ public class AutonomousCommandR extends Command {
     	RobotMap.driveTrainVictorSPX2.setNeutralMode(NeutralMode.Brake);
     	RobotMap.driveTrainVictorSPX6.setNeutralMode(NeutralMode.Brake);
     	RobotMap.driveTrainVictorSPX7.setNeutralMode(NeutralMode.Brake);
-    	Robot.driveTrain.drive(-autoSpeed,-(autoSpeed+.05));
-    	Timer.delay(autoDelay);
-    	Robot.driveTrain.rightTurn();
-		Timer.delay(4);
+    	Robot.driveTrain.drive(-autoSpeed,-(autoSpeed-.03));
+    	Timer.delay(2);
+    	
+    	//Robot.driveTrain.leftTurn();
+		//Timer.delay(1.2);
+		//Robot.driveTrain.drive(-autoSpeed,-(autoSpeed-.03));
+		//Timer.delay(.5);
     	Robot.driveTrain.drive(0, 0);/**/
     	RobotMap.driveTrainVictorSPX1.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX2.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX6.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX7.setNeutralMode(NeutralMode.Coast);
-    	RobotMap.driveTrainDifferentialDrive1.setSafetyEnabled(true);
-    	Robot.gameData.charAt(0);
+    	RobotMap.driveTrainDifferentialDrive1.setSafetyEnabled(false);
     	
     	if(Robot.gameData.length() > 0)
         {
-        	if(Robot.gameData.charAt(0) == 'L')
+        	if(Robot.gameData.charAt(0) == 'R')
         	{
 
         	}else{
@@ -80,8 +82,8 @@ public class AutonomousCommandR extends Command {
         		Robot.intake.intake(-1.0);
         		Timer.delay(2);
         		Robot.intake.intake(0);
-        		RobotMap.intakeVictorSPX4.setSafetyEnabled(true);
-        		RobotMap.intakeVictorSPX5.setSafetyEnabled(true);
+        		RobotMap.intakeVictorSPX4.setSafetyEnabled(false);
+        		RobotMap.intakeVictorSPX5.setSafetyEnabled(false);
         	}
         }
 

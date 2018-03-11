@@ -68,10 +68,10 @@ public class OI {
         buttonLB.whileHeld(new TakeInCommand(true));
         Button buttonRB = new JoystickButton(joystick1, 6);
         buttonRB.whileHeld(new TakeInCommand(false));
-        
-        Button buttonA = new JoystickButton(joystick1, 1);
+        //changed this below after "(joystick1, 1) and (joystick1, 2) 
+        Button buttonA = new JoystickButton(joystick1, 3);
         buttonA.whileHeld(new MoveArmCommand(true));
-        Button buttonB = new JoystickButton(joystick1, 2);
+        Button buttonB = new JoystickButton(joystick1, 1);
         buttonB.whileHeld(new MoveArmCommand(false));
 
 
