@@ -57,9 +57,12 @@ public class AutonomousCommandM extends Command {
     	RobotMap.driveTrainVictorSPX2.setNeutralMode(NeutralMode.Brake);
     	RobotMap.driveTrainVictorSPX6.setNeutralMode(NeutralMode.Brake);
     	RobotMap.driveTrainVictorSPX7.setNeutralMode(NeutralMode.Brake);
-    	Robot.driveTrain.drive(-autoSpeed,-(autoSpeed+.05));
-    	Timer.delay(3);
+    	Robot.driveTrain.drive(autoSpeed,(autoSpeed-.03));
+    	Robot.lifter.liftUp(-.08); 
+    	Timer.delay(2.2);
+    	Robot.lifter.liftUp(0);
     	Robot.driveTrain.drive(0, 0);/**/
+    	//or maybe this should be something driving to the sides.
     	RobotMap.driveTrainVictorSPX1.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX2.setNeutralMode(NeutralMode.Coast);
     	RobotMap.driveTrainVictorSPX6.setNeutralMode(NeutralMode.Coast);

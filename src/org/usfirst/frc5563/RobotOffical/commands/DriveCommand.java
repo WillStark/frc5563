@@ -22,8 +22,8 @@ public class DriveCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.driveTrain.drive(Robot.oi.getJoystick().getRawAxis(1),
-    			               Robot.oi.getJoystick().getRawAxis(5));
+    	Robot.driveTrain.drive(-.85*Robot.oi.getJoystick().getRawAxis(1),
+    			               -.85*Robot.oi.getJoystick().getRawAxis(5));
     	
     }
 
@@ -31,6 +31,7 @@ public class DriveCommand extends Command {
     protected boolean isFinished() {
         return false;
     }
+    
 
     // Called once after isFinished returns true
     protected void end() {
